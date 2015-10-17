@@ -5,6 +5,8 @@
  */
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
+setTimeout(function(){
+
 
 $(function() {
     $('a.page-scroll').on('click', function(event) {
@@ -27,3 +29,4 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+}, 2000);

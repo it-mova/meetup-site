@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var path = require('path');
+var babel = require('gulp-babel');
+var react = require('gulp-react');
 
 //client
 
@@ -12,8 +14,16 @@ gulp.task('less', function () {
         .pipe(gulp.dest('./lib/public/css'));
 });
 
+gulp.task('react', function() {
+    gulp.src('./src/client/js/*.jsx')
+        .pipe(babel())
+        .pipe(react())
+        .pipe(gulp.dest('./lib/public/js'));
+});
+
 gulp.task('js', function() {
     gulp.src('./src/client/js/*.js')
+        .pipe(babel())
         .pipe(gulp.dest('./lib/public/js'));
 });
 
@@ -43,7 +53,7 @@ gulp.task('font-awesome-less', function() {
 
 gulp.task('font-awesome', ['font-awesome-font', 'font-awesome-less']);
 
-gulp.task('client', ['less', 'html', 'js', 'img', 'font-awesome']);
+gulp.task('client', ['less', 'html', 'js', 'img', 'font-awesome', 'react']);
 //server
 
 gulp.task('copyJS', function() {
