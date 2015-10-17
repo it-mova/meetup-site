@@ -15,7 +15,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('react', function() {
-    gulp.src('./src/client/js/*.jsx')
+    gulp.src('./src/client/js/**/*.jsx')
         .pipe(babel())
         .pipe(react())
         .pipe(gulp.dest('./lib/public/js'));
