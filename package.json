@@ -1,0 +1,18 @@
+{
+  "name": "meetup-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/app.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "gulp-less": "^3.0.3",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "gulp && node lib/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
