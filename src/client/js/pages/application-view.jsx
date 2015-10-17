@@ -29,3 +29,5 @@ ReactDOM.render(
     <ApplicationView />
     , document.getElementById('nav-container')
 );
+cbpAnimatedHeader();
+activateScrolling();
