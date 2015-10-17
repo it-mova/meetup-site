@@ -4,7 +4,7 @@ var FooterView = React.createClass({
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
-                        <span className="copyright">Copyright &copy; Your Website 2014</span>
+                        <span className="copyright">Copyright &copy; IT-MOVA 2015</span>
                     </div>
                     <div className="col-md-4">
                         <ul className="list-inline social-buttons">
@@ -17,12 +17,7 @@ var FooterView = React.createClass({
                         </ul>
                     </div>
                     <div className="col-md-4">
-                        <ul className="list-inline quicklinks">
-                            <li><a href="#">Privacy Policy</a>
-                            </li>
-                            <li><a href="#">Terms of Use</a>
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
             </div>
