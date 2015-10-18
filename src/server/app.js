@@ -1,10 +1,10 @@
 'use strict'
 let express = require('express');
 let app = express();
-process.env.NODE_CONFIG_DIR= `${__dirname}/config`;
+process.env.NODE_CONFIG_DIR=`${__dirname}/config`;
 let config = require('config');
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/meetup-site');
+mongoose.connect(process.env.MONGOLAB_URI);
 
 var bodyParser = require('body-parser');
 app.use( bodyParser.json() );
