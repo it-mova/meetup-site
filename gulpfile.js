@@ -57,11 +57,16 @@ gulp.task('client', ['less', 'html', 'js', 'img', 'font-awesome', 'react']);
 //server
 
 gulp.task('copyJS', function() {
-    gulp.src('./src/server/*.js')
+    gulp.src('./src/server/**/*.js')
         .pipe(gulp.dest('./lib'));
 });
 
-gulp.task('server', ['copyJS']);
+gulp.task('json', function() {
+    gulp.src('./src/server/**/*.json')
+        .pipe(gulp.dest('./lib'));
+});
+
+gulp.task('server', ['copyJS', 'json']);
 
 gulp.task('default', ['client', 'server']);
 
