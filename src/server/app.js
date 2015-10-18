@@ -6,7 +6,6 @@ let config = require('config');
 let mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/meetup-site');
 
-app.use('/', express.static(`${__dirname}/public`));
 var bodyParser = require('body-parser');
 app.use( bodyParser.json() );
 app.use(bodyParser.urlencoded({
@@ -36,4 +35,8 @@ app.post('/register', function(req, res){
             error => res.status(500).send(`error ${error}`)
     );
 });
-app.listen(process.env.PORT || '3000');
+
+app.use('/', express.static(`${__dirname}/public`));
+let port = process.env.PORT || '3000';
+app.listen(port);
+console.log(`started express on ${port}`);
