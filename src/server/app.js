@@ -4,7 +4,7 @@ let app = express();
 process.env.NODE_CONFIG_DIR=`${__dirname}/config`;
 let config = require('config');
 let mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/meetup');
 
 var bodyParser = require('body-parser');
 app.use( bodyParser.json() );
