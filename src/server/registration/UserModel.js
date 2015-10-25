@@ -2,6 +2,7 @@
 let mongoose = require('mongoose');
 let loadClass = require('mongoose-class-wrapper');
 let crypto = require('crypto');
+let knownErrors = require('../core/known-errors');
 
 let userSchema = new mongoose.Schema({
     email: {type: String, unique: true, required: true},
@@ -17,7 +18,19 @@ class UserModel {
     static createUser(email, username, phone) {
         let hash = UserModel.createHash();
         let created = new Date();
-        return new Model({email, username, phone, hash, created}).save();
+        return new Promise(function(resolve, reject){
+            new Model({email, username, phone, hash, created}).save().then(
+                (data) => resolve(),
+                (error) => {
+                    console.log(error);
+                    if(error.code == 11000) {
+                        reject(knownErrors.USER_EXISTS);
+                    } else {
+                        reject(knownErrors.UNKNOWN_ERROR);
+                    }
+                }
+            );
+        });
     }
 
     static createHash() {

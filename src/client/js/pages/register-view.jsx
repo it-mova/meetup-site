@@ -42,13 +42,12 @@ var RegisterView = React.createClass({
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-group">
-                                            <textarea className="form-control"
-                                                      placeholder="Паведамленне *"
-                                                      ref="message"
-                                                      id="message">
-                                            </textarea>
+                                            <input type="text" className="form-control" ref="captcha"
+                                                   placeholder="Код бяспекі *" id="captcha"/>
 
-                                            <p className="help-block text-danger"></p>
+                                            <div className="captcha-spacer"/>
+
+                                            <img id="captcha-image" src="/captcha.jpg"/>
                                         </div>
                                     </div>
                                     <div className="clearfix"></div>

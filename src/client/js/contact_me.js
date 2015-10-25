@@ -1,5 +1,5 @@
 $(function () {
-    function checkForm(username, email, phone, message) {
+    function checkForm(username, email, phone, captcha) {
         let error;
         if (!username) {
             error = "Калі ласка, увядзіце імя.";
@@ -7,8 +7,8 @@ $(function () {
             error = "Калі ласка, увядзіце карэктны эмэйл.";
         } else if (!phone) {
             error = "Калі ласка, увядзіце тэлефон.";
-        } else if (!message) {
-            error = "Калі ласка ўвядзіце паведамленне.";
+        } else if (!captcha) {
+            error = "Калі увядзіце код бяспекі.";
         }
         return {error, success: error === undefined};
     }
@@ -32,19 +32,19 @@ $(function () {
             var username = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
+            var captcha = $("input#captcha").val();
 
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            let checkFormResult = checkForm(username, email, phone, message);
+            let checkFormResult = checkForm(username, email, phone, captcha);
             if (checkFormResult.success) {
                 $.ajax({
                     url: "/register",
                     type: "POST",
-                    data: {username, email, phone, message},
+                    data: {username, email, phone, captcha},
                     cache: false,
                     success: function () {
                         // Success message
@@ -59,11 +59,18 @@ $(function () {
                         //clear all fields
                         $('#contactForm').trigger("reset");
                     },
-                    error: function () {
+                    error: function (err) {
                         // Fail message
-                        warnUser(`Прабачце ${firstName}, падаецца, што сервер не адказвае!`);
+                        let errorCode = err.responseJSON && err.responseJSON.error ? err.responseJSON.error.code : 0;
+                        if(errorCode == 101) {
+                            warnUser(`Прабачце, але адрас ${email} ужо зарэгістраваны!`);
+                        }else if(errorCode == 102) {
+                            warnUser(`Прабачце ${username}, Вы ўвялі няправільны код бяспекі!`);
+                        }else {
+                            warnUser(`Прабачце ${firstName}, падаецца, што сервер не адказвае!`);
+                        }
                         //clear all fields
-                        $('#contactForm').trigger("reset");
+                        $("#captcha-image").attr("src", "/captcha.jpg?id="+new Date().getTime());
                     },
                 })
             } else {

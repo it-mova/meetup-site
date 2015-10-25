@@ -6,8 +6,11 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "bytes": "^2.1.0",
+    "captcha": "0.0.4",
     "config": "^1.16.0",
     "content-type": "^1.0.1",
+    "cookie-parser": "^1.4.0",
+    "cookie-session": "^1.2.0",
     "crypto": "0.0.3",
     "debug": "^2.2.0",
     "depd": "^1.1.0",
