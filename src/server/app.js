@@ -30,7 +30,7 @@ emitter.on('userCreated',
     }
 );
 
-let captcha = require('captcha');
+let captcha = require('./registration/captcha');
 app.get('/captcha.jpg', captcha({color:'#FED136', background: 'rgb(20,30,20)' }));
 
 app.use('/register', function captchaMiddleware(req, res, next) {
