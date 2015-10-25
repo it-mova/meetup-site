@@ -1,4 +1,23 @@
 var HowToFindView = React.createClass({
+    componentDidMount() {
+        function initialize() {
+            var mapCanvas = document.getElementById('map');
+            var latLng = new google.maps.LatLng(53.9283718, 27.6066042);
+            var mapOptions = {
+                center: latLng,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+            var marker = new google.maps.Marker({
+                position: latLng,
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    },
     render: () =>
         <section id="howtofind">
             <div className="container">
@@ -9,18 +28,16 @@ var HowToFindView = React.createClass({
                     </div>
                 </div>
                 <div className="row text-center">
-                    <div className="col-md-6">
-                    <span className="fa-stack fa-4x">
-                        <i className="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i className="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                        <h4 className="service-heading">Тут будзе мапа і адрэса</h4>
+                    <div className="col-md-6 text-center">
+                        <div id="map"></div>
                     </div>
                     <div className="col-md-6">
-                        <h4 className="service-heading">11 лістапада ў 11:00</h4>
+                        <div className="how-to-find-description">
+                            <h4 className="service-heading">11 лістапада ў 11:00</h4>
 
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                            maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+                                maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
                     </div>
                 </div>
             </div>

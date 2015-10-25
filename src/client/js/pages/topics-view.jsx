@@ -12,9 +12,9 @@ var TopicItemsView = React.createClass({
                 </a>
 
                 <div className="portfolio-caption">
-                    <h4>{topic.speaker}</h4>
+                    <h4>{topic.topic}</h4>
 
-                    <p className="text-muted">{topic.topic}</p>
+                    <p className="text-muted">{topic.speaker}</p>
                 </div>
             </div>
         );
