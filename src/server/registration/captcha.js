@@ -15,7 +15,7 @@ module.exports = function(params){
 		ctx.fillStyle = params.color;
 		ctx.lineWidth = 8;
 		ctx.strokeStyle = params.color;
-		ctx.font = '3px sans';
+		ctx.font = '20px sans';
 
 		var text = ('' + Math.random()).substr(3, 6);
 
