@@ -2,13 +2,13 @@ var HowToFindView = React.createClass({
     componentDidMount() {
         function initialize() {
             var mapCanvas = document.getElementById('map');
-            var latLng = new google.maps.LatLng(53.9283718, 27.6066042);
+            var latLng = new google.maps.LatLng(53.891295, 27.537461);
             var mapOptions = {
                 center: latLng,
-                zoom: 15,
+                zoom: 17,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
-            var map = new google.maps.Map(mapCanvas, mapOptions)
+            var map = new google.maps.Map(mapCanvas, mapOptions);
             var marker = new google.maps.Marker({
                 position: latLng,
                 map: map,
@@ -33,10 +33,12 @@ var HowToFindView = React.createClass({
                     </div>
                     <div className="col-md-6">
                         <div className="how-to-find-description">
-                            <h4 className="service-heading">11 лістапада ў 11:00</h4>
+                            <h4 className="service-heading">21 лістапада а 12:00</h4>
 
-                            <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-                                maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <span className="text-muted">
+                                Бізнэс клуб IMAGURU, г. Мінск, вул. Фабрыцыуса 4, заля Nordic.<br/>
+                                <b>Калі ласка, <a href='#register'>зарэгіструйцеся!</a></b>
+                            </span>
                         </div>
                     </div>
                 </div>
