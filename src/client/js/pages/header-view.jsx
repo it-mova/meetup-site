@@ -23,25 +23,22 @@ var TimerView = React.createClass({
         var days = Math.floor(timeLeft / (60 * 60 * 24));
         return (
             <div className="intro-heading">
-                <ul>
-                    <li>
-                        <div>{days}</div>
-                        <p>Дзён</p>
-                    </li>
-                    <li>
-                        <div>{format(hours)}</div>
-                        <p>Гадзін</p>
-                    </li>
-                    <li>
-                        <div>{format(minutes)}</div>
-                        <p>Хвілін</p>
-                    </li>
-                    <li>
-                        <div>{format(seconds)}</div>
-                        <p>Секунд</p>
-                    </li>
-                </ul>
-                <br/>
+                <div>
+                    <div>{days}</div>
+                    <p>Дзён</p>
+                </div>
+                <div>
+                    <div>{format(hours)}</div>
+                    <p>Гадзін</p>
+                </div>
+                <div>
+                    <div>{format(minutes)}</div>
+                    <p>Хвілін</p>
+                </div>
+                <div>
+                    <div>{format(seconds)}</div>
+                    <p>Секунд</p>
+                </div>
             </div>
         )
     }
