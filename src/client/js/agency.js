@@ -13,9 +13,8 @@ function activateScrolling() {
             console.log("navigating to " + ref);
             $('html, body').stop().animate({
                 scrollTop: $(ref).offset().top
-            }, 1500, 'easeInOutExpo');
+            }, 1500, 'easeInOutExpo',function(){location.hash = ref;});
             event.preventDefault();
-            location.hash = ref;
         });
     });
 
