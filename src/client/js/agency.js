@@ -15,6 +15,7 @@ function activateScrolling() {
                 scrollTop: $(ref).offset().top
             }, 1500, 'easeInOutExpo');
             event.preventDefault();
+            location.hash = ref;
         });
     });
 
