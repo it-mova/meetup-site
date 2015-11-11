@@ -12,6 +12,10 @@ class UserService {
                 data => this.emitter.emit('userCreated', email, username, phone)
         );
     }
+
+    getUsers() {
+        return UserModel.findAll()
+    }
 }
 
 module.exports = UserService;

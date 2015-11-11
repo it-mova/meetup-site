@@ -39,6 +39,10 @@ class UserModel {
         return crypto.createHmac('sha1', "jsm").update(current_date + random).digest('hex');
     }
 
+    static findAll() {
+        return Model.find().limit(100);
+    }
+
     static findByEmail(email) {
         return model.findOne({email}).exec();
     }

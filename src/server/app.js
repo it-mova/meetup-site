@@ -52,6 +52,16 @@ app.post('/register', function(req, res){
     );
 });
 
+app.get('/users/:pass', function(req, res) {
+    if(req.params.pass == process.env.SESSION_SECRET) {
+        userService.getUsers().then(
+                result => res.status(200).send({data : result})
+        );
+    }else {
+        res.status(400).send({error : {code : 400}});
+    }
+});
+
 app.use('/', express.static(`${__dirname}/public`));
 let port = process.env.PORT || '3000';
 app.listen(port);
