@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 let express = require('express');
 let app = express();
 process.env.NODE_CONFIG_DIR=`${__dirname}/config`;
