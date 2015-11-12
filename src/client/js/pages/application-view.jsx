@@ -1,7 +1,7 @@
 var menuItemsData = [
     {
         key: "howtofind",
-        name: "Як патрапіць?"
+        name: "Як дабрацца?"
     },
     {
         key: "topics",
@@ -20,7 +20,7 @@ var topics = [
     image: "img/topics/isotope.png",
     ref: "isotopeModal",
     shortDescription: "Анімацыйны Фрэймворк",
-    longDescription: '<div><p></p></div>'
+    longDescription: '<div>Знаёмства з плагінам. Прыклады<br/>Хуткі старт (npm install, jQuery + Isotope, CDN)<br/>Фільтрацыя і сартыроўка на web-старонцы<br/>Дынаміка, падзеі ды AJAX<br/>Інтэграцыя з CMS на прыкладзе Drupal and Wordpress</div>'
   },
   {
     speaker: "Ігар Цімошка",
@@ -37,6 +37,14 @@ var topics = [
     ref: "ecmaScriptModal",
     shortDescription: "Новыя магчымасці JavaScript",
     longDescription: '<div>Пасля таго, як <b>node.js</b> пачала падтрымліваць асноўныя магчымасці <b>ES6</b>, а кампілятары кшталту <b>Babel</b> падтрымліваюць больш за 70% функцыаналу - актуальнасць <b>EcmaScript 2015</b> высокая як ніколі!<br/>Вы пачуеце аб тым якія з гэтых магчымасцяў вы можаце выкарыстаць ужо сёння і пабачыце шмат тлумачальных прыкладаў па тэме!</p></div>'
+  },
+  {
+    speaker: "Міхал Румянцаў",
+    topic: "ANGULAR MATERIAL VS MATERIAL DESIGN LIGHT",
+    image: "img/topics/angular-vs-design-light.png",
+    ref: "angular_material_vs_material_design_light",
+    shortDescription: "параўнанне двух падыходаў да рэалізацыі у Web канцэпцыі Material Design",
+    longDescription: '<div></div>'
   }
 ];
 

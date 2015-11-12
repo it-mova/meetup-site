@@ -23,7 +23,7 @@ var HowToFindView = React.createClass({
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
-                        <h2 className="section-heading">Як патрапіць</h2>
+                        <h2 className="section-heading">Як дабрацца</h2>
 
                     </div>
                 </div>
