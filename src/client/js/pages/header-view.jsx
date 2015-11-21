@@ -16,7 +16,7 @@ var TimerView = React.createClass({
     },
     render() {
         var format = time => `${time < 10 ? '0' : ''}${time}`;
-        var timeLeft = Math.round(this.state.timeLeft / 1000);
+        var timeLeft = Math.round(Math.max(this.state.timeLeft, 0) / 1000);
         var seconds = timeLeft % 60;
         var minutes = (timeLeft - seconds) / 60 % 60;
         var hours = (timeLeft - seconds - minutes * 60) / (60 * 60) % 24;
