@@ -33,7 +33,7 @@ var HowToFindView = React.createClass({
                     </div>
                     <div className="col-md-6">
                         <div className="how-to-find-description">
-                            <h4 className="service-heading">21 лістапада а 12:00</h4>
+                            <h4 className="service-heading">6 лютага а 12:00</h4>
 
                             <span className="text-muted">
                                 Бізнэс клуб IMAGURU, г. Мінск, вул. Фабрыцыуса 4, заля Nordic.<br/>

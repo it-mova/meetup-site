@@ -14,38 +14,38 @@ var menuItemsData = [
 ];
 
 var topics = [
-  {
-    speaker: "Юльян Місюкевіч",
-    topic: "isotope",
-    image: "img/topics/isotope.png",
-    ref: "isotopeModal",
-    shortDescription: "Анімацыйны Фрэймворк",
-    longDescription: '<div>Знаёмства з плагінам. Прыклады<br/>Хуткі старт (npm install, jQuery + Isotope, CDN)<br/>Фільтрацыя і сартыроўка на web-старонцы<br/>Дынаміка, падзеі ды AJAX<br/>Інтэграцыя з CMS на прыкладзе Drupal and Wordpress</div>'
-  },
-  {
-    speaker: "Ігар Цімошка",
-    topic: "slack",
-    image: "img/topics/slack.png",
-    ref: "slackModal",
-    shortDescription: "Камунікацыя новага пакалення",
-    longDescription: '<div><p><b>Slack</b> my pitch up! Альбо як звесці блізкасць зносін каманды да непрыстойнасці</p></div>'
-  },
-  {
-    speaker: "Міхась Бутылін",
-    topic: "EcmaScript 2015",
-    image: "img/topics/es6.png",
-    ref: "ecmaScriptModal",
-    shortDescription: "Новыя магчымасці JavaScript",
-    longDescription: '<div>Пасля таго, як <b>node.js</b> пачала падтрымліваць асноўныя магчымасці <b>ES6</b>, а кампілятары кшталту <b>Babel</b> падтрымліваюць больш за 70% функцыаналу - актуальнасць <b>EcmaScript 2015</b> высокая як ніколі!<br/>Вы пачуеце аб тым якія з гэтых магчымасцяў вы можаце выкарыстаць ужо сёння і пабачыце шмат тлумачальных прыкладаў па тэме!</p></div>'
-  },
-  {
-    speaker: "Міхал Румянцаў",
-    topic: "ANGULAR MATERIAL VS MATERIAL DESIGN LIGHT",
-    image: "img/topics/angular-vs-design-light.png",
-    ref: "angular_material_vs_material_design_light",
-    shortDescription: "параўнанне двух падыходаў да рэалізацыі у Web канцэпцыі Material Design",
-    longDescription: '<div></div>'
-  }
+    {
+        speaker: "Вадзім Зенька",
+        topic: "EcmaScript 2015. Частка 2.",
+        image: "img/topics/es6.png",
+        ref: "ecmaScriptModal2",
+        shortDescription: "Новыя магчымасці JavaScript.",
+        longDescription: '<div>Пасля таго, як <b>node.js</b> пачала падтрымліваць асноўныя магчымасці <b>ES6</b>, а кампілятары кшталту <b>Babel</b> падтрымліваюць больш за 70% функцыаналу - актуальнасць <b>EcmaScript 2015</b> высокая як ніколі!<br/>Вы пачуеце аб тым якія з гэтых магчымасцяў вы можаце выкарыстаць ужо сёння і пабачыце шмат тлумачальных прыкладаў па тэме!</div>'
+    },
+    {
+        speaker: "Віталь Чараповіч",
+        topic: "Flash To Html5",
+        image: "img/topics/bannermaking.png",
+        ref: "flashToHtml5Modal",
+        shortDescription: "Баннермэйкінг у постфлэшавым свеце",
+        longDescription: '<div>HTML5 замест флэша ў вытворчасці банераў: сакрэты рэкламнай інтэрнэт-індустрыі пасля самай масштабнай перабудовы, сучасныя тэхналогіі стварэння банераў, іх асаблівасці і абмежаванні.</div>'
+    },
+    {
+        speaker: "Міхась Бутылін",
+        topic: "Flowtype",
+        image: "img/topics/flowtype.png",
+        ref: "flowtypeModal",
+        shortDescription: "Тыпізаваны JavaScript",
+        longDescription: '<div>З ростам папулярнасці <b>JavaScript</b>, праэкты становяцца ўсё больш маштабнымі і складанымі. Статычная тыпізацыя ад <b>facebook</b> дапаможа ўтрымаць ваш код чыстым і карэктным.</div>'
+    },
+    {
+        speaker: "Філіп Данэйка",
+        topic: "Webpack",
+        image: "img/topics/webpack.png",
+        ref: "webpackModal",
+        shortDescription: "Аўтаматызаваня сборка праэктаў",
+        longDescription: '<div><b>webpack</b> - сборка праэктаў</div>'
+    }
 ];
 
 var ApplicationView = React.createClass({

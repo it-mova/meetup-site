@@ -19,6 +19,7 @@ var TopicDescriptionView = React.createClass({
                   <div>
                     <div dangerouslySetInnerHTML={{__html: this.props.topic.longDescription}}></div>
                   </div>
+                  <br/>
                   <button type="button" className="btn btn-primary" data-dismiss="modal">
                     <i className="fa fa-times"></i>
                     <span> Вярнуцца</span>

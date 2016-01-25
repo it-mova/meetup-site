@@ -12,7 +12,7 @@ var TimerView = React.createClass({
         this.setState({timeLeft: this.getTimeLeft()});
     },
     getTimeLeft() {
-        return new Date('2015-11-21T12:00:00+03:00').getTime() - new Date().getTime();
+        return new Date('2016-02-06T12:00:00+03:00').getTime() - new Date().getTime();
     },
     render() {
         var format = time => `${time < 10 ? '0' : ''}${time}`;
