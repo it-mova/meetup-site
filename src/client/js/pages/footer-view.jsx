@@ -10,7 +10,7 @@ var FooterView = React.createClass({
                         <ul className="list-inline social-buttons">
                             <li><a target="_blank" href="https://vk.com/jsminsk"><i className="fa fa-vk"></i></a>
                             </li>
-                            <li><a target="_blank" href="https://www.facebook.com/events/1638726959748767/"><i className="fa fa-facebook"></i></a>
+                            <li><a target="_blank" href="https://www.facebook.com/events/571422366354400/"><i className="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
