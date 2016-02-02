@@ -39,7 +39,7 @@ var topics = [
         longDescription: '<div>З ростам папулярнасці <b>JavaScript</b>, праэкты становяцца ўсё больш маштабнымі і складанымі. Статычная тыпізацыя ад <b>facebook</b> дапаможа ўтрымаць ваш код чыстым і карэктным.</div>'
     },
     {
-        speaker: "Філіп Данэйка",
+        speaker: "Філіп Дайнека",
         topic: "Webpack",
         image: "img/topics/webpack.png",
         ref: "webpackModal",
